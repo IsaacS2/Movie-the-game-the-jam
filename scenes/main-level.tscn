@@ -1,3 +1,44 @@
-[gd_scene format=3 uid="uid://ctbe527gljv6s"]
+[gd_scene load_steps=6 format=3 uid="uid://ctbe527gljv6s"]
+
+[ext_resource type="MeshLibrary" uid="uid://dc3wtlwhgbhq2" path="res://models/MeshLibrary.tres" id="1_02re4"]
+[ext_resource type="Script" uid="uid://ckk7ocxscigps" path="res://scripts/PlayerCamera.gd" id="2_bdrgs"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_02re4"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_bdrgs"]
+sky_material = SubResource("ProceduralSkyMaterial_02re4")
+
+[sub_resource type="Environment" id="Environment_yyih8"]
+background_mode = 2
+sky = SubResource("Sky_bdrgs")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="MainLevel" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yyih8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-1, -8.742277e-08, -3.8213705e-15, 0, -4.3711385e-08, 0.99999994, -8.742278e-08, 0.99999994, 4.3711385e-08, 0, 0, 0)
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-1, -8.742277e-08, -3.8213705e-15, 0, -4.3711385e-08, 0.99999994, -8.742278e-08, 0.99999994, 4.3711385e-08, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Facility" type="GridMap" parent="."]
+mesh_library = ExtResource("1_02re4")
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 0, 65535, 4, 0, 65534, 4, 0, 65533, 4, 0, 65532, 4, 0, 65531, 1441800, 65535, 65530, 1441800, 65535, 65532, 655368, 65532, 65532, 1048584, 65532, 65530, 8, 65534, 65530, 2, 65533, 65530, 2, 65532, 65531, 1048578, 65533, 65532, 655362, 65534, 65532, 655362, 65533, 65531, 655360, 65534, 65531, 655360, 65535, 65531, 655360)
+}
+
+[node name="PlayerCamera" type="Camera3D" parent="." node_paths=PackedStringArray("facility")]
+script = ExtResource("2_bdrgs")
+facility = NodePath("../Facility")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.5, 1)
