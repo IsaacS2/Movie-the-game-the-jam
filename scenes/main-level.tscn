@@ -1,7 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctbe527gljv6s"]
+[gd_scene load_steps=13 format=3 uid="uid://ctbe527gljv6s"]
 
 [ext_resource type="MeshLibrary" uid="uid://dc3wtlwhgbhq2" path="res://models/MeshLibrary.tres" id="1_02re4"]
+[ext_resource type="Script" uid="uid://d5hpfhnv5s3t" path="res://scenes/main_level.gd" id="1_6rdlt"]
 [ext_resource type="Script" uid="uid://ckk7ocxscigps" path="res://scripts/PlayerCamera.gd" id="2_bdrgs"]
+[ext_resource type="Texture2D" uid="uid://ipkx2ogkf34a" path="res://icon.svg" id="3_bdrgs"]
+[ext_resource type="Script" uid="uid://c8u77arlgrtue" path="res://scenes/button.gd" id="5_djt6b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyih8"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_yyih8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djt6b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yyih8"]
+size = Vector3(1, 1, 0.1)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_02re4"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -17,6 +29,27 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="MainLevel" type="Node3D"]
+script = ExtResource("1_6rdlt")
+
+[node name="PlayerCamera" type="Camera3D" parent="." node_paths=PackedStringArray("facility")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.11477846)
+script = ExtResource("2_bdrgs")
+facility = NodePath("../Facility")
+
+[node name="ScreenMesh" type="MeshInstance3D" parent="PlayerCamera"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.115)
+material_override = SubResource("StandardMaterial3D_yyih8")
+mesh = SubResource("QuadMesh_yyih8")
+surface_material_override/0 = SubResource("StandardMaterial3D_djt6b")
+
+[node name="Area3D" type="Area3D" parent="PlayerCamera/ScreenMesh"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerCamera/ScreenMesh/Area3D"]
+shape = SubResource("BoxShape3D_yyih8")
+
+[node name="RayCast3D" type="RayCast3D" parent="PlayerCamera"]
+visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_yyih8")
@@ -25,20 +58,36 @@ environment = SubResource("Environment_yyih8")
 transform = Transform3D(-1, -8.742277e-08, -3.8213705e-15, 0, -4.3711385e-08, 0.99999994, -8.742278e-08, 0.99999994, 4.3711385e-08, 0, 0, 0)
 shadow_enabled = true
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, -3.8213705e-15, 0, -4.3711385e-08, 0.99999994, -8.742278e-08, 0.99999994, 4.3711385e-08, 0, 0, 0)
-shadow_enabled = true
-
 [node name="Facility" type="GridMap" parent="."]
 mesh_library = ExtResource("1_02re4")
 cell_center_y = false
 data = {
-"cells": PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 0, 65535, 4, 0, 65534, 4, 0, 65533, 4, 0, 65532, 4, 0, 65531, 1441800, 65535, 65530, 1441800, 65535, 65532, 655368, 65532, 65532, 1048584, 65532, 65530, 8, 65534, 65530, 2, 65533, 65530, 2, 65532, 65531, 1048578, 65533, 65532, 655362, 65534, 65532, 655362, 65533, 65531, 655360, 65534, 65531, 655360, 65535, 65531, 655360)
+"cells": PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 0, 65535, 1048576, 0, 65534, 655360, 0, 65533, 1048576, 0, 65532, 0, 0, 65531, 655360, 65535, 65530, 1048576, 65532, 65532, 655360, 65532, 65530, 655360, 65534, 65530, 2, 65533, 65530, 2, 65532, 65531, 655360, 65533, 65532, 655362, 65534, 65532, 655362, 65533, 65531, 655360, 65534, 65531, 655360, 65535, 65531, 655360, 65533, 65534, 1, 65533, 65533, 1, 65534, 65534, 0, 65534, 65533, 0, 65532, 65534, 655360, 65535, 65532, 655362, 1, 65532, 655362, 1, 65531, 655360, 2, 65531, 655360, 3, 65531, 655360, 4, 65531, 655360, 5, 65531, 655360, 5, 65532, 655360, 4, 65532, 655360, 3, 65532, 655360, 2, 65532, 655360, 65532, 65529, 2, 65530, 65529, 8, 65531, 65529, 2, 65530, 65530, 1048578, 65530, 65531, 1048578, 65530, 65532, 1048578, 65531, 65530, 1048576, 65531, 65531, 1048576, 65531, 65532, 1048576, 0, 65530, 1048576, 1, 65530, 1048576, 2, 65530, 1048576, 4, 65530, 1048576, 3, 65530, 1048576, 5, 65530, 1048576, 65535, 65529, 2, 6, 65529, 1441800, 65533, 65529, 2, 65534, 65529, 2, 0, 65529, 2, 1, 65529, 2, 2, 65529, 2, 3, 65529, 2, 4, 65529, 2, 5, 65529, 2, 65535, 0, 0, 0, 1, 0, 2, 2, 655361)
 }
 
-[node name="PlayerCamera" type="Camera3D" parent="." node_paths=PackedStringArray("facility")]
-script = ExtResource("2_bdrgs")
-facility = NodePath("../Facility")
+[node name="ScreenView" type="SubViewport" parent="."]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.5, 1)
+[node name="SceneLevel" type="Node2D" parent="ScreenView"]
+
+[node name="PayphoneCamera1" type="Camera2D" parent="ScreenView/SceneLevel"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ScreenView/SceneLevel/PayphoneCamera1"]
+texture = ExtResource("3_bdrgs")
+
+[node name="Control" type="Control" parent="ScreenView"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="ScreenView/Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Hello"
+script = ExtResource("5_djt6b")
+
+[connection signal="pressed" from="ScreenView/Control/Button" to="ScreenView/Control/Button" method="_on_pressed"]

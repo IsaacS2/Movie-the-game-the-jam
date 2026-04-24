@@ -11,7 +11,7 @@ var movingInput : int
 var turningDirection : int
 var currentRotation = FACING.EAST
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	cameraHeight = Vector3.UP * .5
 	_turn_to_direction(currentRotation)
@@ -19,7 +19,6 @@ func _ready() -> void:
 		position = facility.map_to_local(Vector3i(0,0,0)) + cameraHeight
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	movingInput = int(Input.is_action_just_pressed("ui_down")) - int(Input.is_action_just_pressed("ui_up"))
 	turningDirection = int(Input.is_action_just_pressed("ui_left")) - int(Input.is_action_just_pressed("ui_right"))
@@ -35,8 +34,8 @@ func _process(delta: float) -> void:
 		desiredSpace = facility.map_to_local(desiredSpace)
 		#print(desiredSpace)
 		
-		if (facility and cellCheck > -1):
-			position = desiredSpace + cameraHeight
+		if (facility and cellCheck > -1): # and check that player's not going through wall):
+			position = desiredSpace + cameraHeight + Vector3(0, 0, 0)
 			#print(position)
 	
 	elif (turningDirection != 0):
@@ -52,6 +51,7 @@ func _process(delta: float) -> void:
 	
 	movingInput = 0
 	turningDirection = 0
+
 
 func _turn_to_direction(newDirection : FACING) -> void:
 	currentRotation = newDirection
