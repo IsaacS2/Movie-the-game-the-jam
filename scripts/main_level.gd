@@ -1,3 +1,6 @@
+# Code from 2d_in_3d and gui_in_3d godot projects
+# from github.com/godotengine/godot-demo-projects/tree/4.2-31d1c0c/viewport
+
 extends Node3D
 
 @onready var node_viewport = $ScreenView
@@ -60,8 +63,6 @@ func _mouse_input_event(_camera: Camera3D, event: InputEvent, event_position: Ve
 	# Convert position to a coordinate space relative to the Area3D node.
 	# NOTE: affine_inverse accounts for the Area3D node's scale, rotation, and position in the scene!
 	event_pos3D = node_quad.global_transform.affine_inverse() * event_pos3D
-
-	# TODO: Adapt to bilboard mode or avoid completely.
 
 	var event_pos2D: Vector2 = Vector2()
 

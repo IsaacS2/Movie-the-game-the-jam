@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cagyt83b2dyf5"]
+
+[ext_resource type="Script" uid="uid://ckj3q6xwbagkd" path="res://scripts/hacking_space.gd" id="1_7jeb5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4a47g"]
+size = Vector3(1.5, 1, 1.5)
+
+[node name="HackingSpace" type="Area3D"]
+script = ExtResource("1_7jeb5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_4a47g")
+debug_color = Color(0.8627451, 0.31764707, 0.44705883, 0.972549)
