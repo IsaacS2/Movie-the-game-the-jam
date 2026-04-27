@@ -184,5 +184,7 @@ script = ExtResource("5_djt6b")
 [node name="blockbench_export" parent="." instance=ExtResource("7_u2c82")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -7)
 
+[node name="Facility_CC" type="GridMap" parent="."]
+
 [connection signal="timeout" from="ScreenView/Hack1/Passcode/Timer" to="ScreenView/Hack1/Passcode" method="_on_timer_timeout"]
 [connection signal="pressed" from="ScreenView/Control/Button" to="ScreenView/Control/Button" method="_on_pressed"]
