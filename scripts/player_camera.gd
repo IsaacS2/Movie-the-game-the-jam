@@ -4,8 +4,9 @@ extends Camera3D
 
 enum FACING {EAST, NORTH, WEST, SOUTH}
 
+@onready var screenMesh: MeshInstance3D = %ScreenMesh
 @onready var playerArea: Area3D = $PlayerArea
-@onready var label: Label = $Label
+@onready var label: Label = $Control/Label
 @export var facility : GridMap
 var hackArea : HackingSpace
 var cameraHeight : Vector3
@@ -27,7 +28,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if (!immobile):
 		if (canHack):
-			hackArea._start_hack()
+			if (Input.is_action_just_pressed("ui_accept")):
+				if (hackArea): 
+					hackArea._start_hack()
+					screenMesh.visible = true
+					label.visible = false
 		
 		movingInput = int(Input.is_action_just_pressed("ui_down")) - int(Input.is_action_just_pressed("ui_up"))
 		turningDirection = int(Input.is_action_just_pressed("ui_left")) - int(Input.is_action_just_pressed("ui_right"))
@@ -58,8 +63,9 @@ func _process(_delta: float) -> void:
 		turningDirection = 0
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if (checkArea):
+		print("checking")
 		_check_for_areas()
 
 
@@ -83,9 +89,13 @@ func _turn_to_direction(newDirection : FACING) -> void:
 
 
 func _check_for_areas() -> void:
+	checkArea = false
+	
 	if (playerArea.has_overlapping_areas()):
 		var area = playerArea.get_overlapping_areas()[0]
+		print("psace checked")
 		if (area is HackingSpace):
+			print("psace entered")
 			hackArea = area
 			canHack = true
 			label.visible = true
@@ -93,3 +103,20 @@ func _check_for_areas() -> void:
 	
 	canHack = false
 	label.visible = false
+
+
+func _return_movement() -> void:
+	print("inisivre")
+	screenMesh.visible = false
+	immobile = false
+	label.visible = false
+	if (hackArea): hackArea.queue_free()
+
+
+func _on_player_area_area_entered(area: Area3D) -> void:
+	_check_for_areas()
+
+
+func _on_player_area_area_exited(area: Area3D) -> void:
+	pass
+	#_check_for_areas()

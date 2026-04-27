@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Dialogue box.png-64c66da8d98d3b3fcac48260c7f5
 
 [params]
 
-compress/mode=0
+compress/mode=4
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0

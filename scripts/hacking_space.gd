@@ -6,4 +6,4 @@ extends Area3D
 
 
 func _start_hack() -> void:
-	if (hackable): hackable._activate(true)
+	if (hackable and hackable != null): hackable._activate(true)
