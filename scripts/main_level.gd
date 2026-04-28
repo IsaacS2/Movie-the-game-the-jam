@@ -6,7 +6,6 @@ extends Node3D
 @onready var node_viewport = $ScreenView
 @onready var node_quad = %ScreenMesh
 @onready var node_area = %ScreenMesh/Area3D
-
 # Used for checking if the mouse is inside the Area3D.
 var is_mouse_inside = false
 # The last processed input touch/mouse event. To calculate relative movement.
@@ -30,7 +29,6 @@ func _ready():
 	# If the material is NOT set to use billboard settings, then avoid running billboard specific code
 	if node_quad.get_surface_override_material(0).billboard_mode == BaseMaterial3D.BillboardMode.BILLBOARD_DISABLED:
 		set_process(false)
-
 
 func _mouse_entered_area():
 	is_mouse_inside = true

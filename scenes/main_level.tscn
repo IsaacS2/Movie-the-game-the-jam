@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://ctbe527gljv6s"]
+[gd_scene load_steps=21 format=3 uid="uid://ctbe527gljv6s"]
 
 [ext_resource type="MeshLibrary" uid="uid://dc3wtlwhgbhq2" path="res://models/MeshLibrary.tres" id="1_02re4"]
 [ext_resource type="Script" uid="uid://d5hpfhnv5s3t" path="res://scripts/main_level.gd" id="1_6rdlt"]
@@ -30,6 +30,9 @@
 [ext_resource type="PackedScene" uid="uid://ds13wh2e7drv1" path="res://models/Fire_Alarm.gltf" id="27_nstfs"]
 [ext_resource type="PackedScene" uid="uid://bfljt63sb28v" path="res://models/FloppyD.gltf" id="28_urjsn"]
 [ext_resource type="PackedScene" uid="uid://blar2hj37q8fr" path="res://models/Green_Exitsign.gltf" id="29_njqd0"]
+[ext_resource type="Script" uid="uid://di0tpuetdpoyy" path="res://UI/scripts/dialogue_manager.gd" id="9_5fr2l"]
+[ext_resource type="FontFile" uid="uid://ds55sq32soata" path="res://UI/Font/Mad Pixels.otf" id="10_2sb77"]
+[ext_resource type="Texture2D" uid="uid://e72iyclc2uhk" path="res://UI/2D/Dialogue box.webp" id="11_2sb77"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyih8"]
 
@@ -55,6 +58,9 @@ background_mode = 2
 sky = SubResource("Sky_bdrgs")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2sb77"]
+texture = ExtResource("11_2sb77")
 
 [node name="MainLevel" type="Node3D"]
 script = ExtResource("1_6rdlt")
@@ -335,3 +341,47 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.468711, 0, 4.9221106)
 [connection signal="pressed" from="ScreenView/Camera2D/Control/Button" to="ScreenView/Camera2D/Control/Button" method="_on_pressed"]
 [connection signal="timeout" from="ScreenView/Camera2D/Hack1/Passcode/Timer" to="ScreenView/Camera2D/Hack1/Passcode" method="_on_timer_timeout"]
 [connection signal="timeout" from="ScreenView/Camera2D/Kill1/DeletableText/Timer" to="ScreenView/Camera2D/Kill1/DeletableText" method="_on_timer_timeout"]
+[node name="Dialogue Manager" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("9_5fr2l")
+
+[node name="DialogueBox" type="Control" parent="Dialogue Manager"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue Manager/DialogueBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 110.0
+offset_top = 45.0
+offset_right = 110.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0.07391659, 0.48251325, 1)
+theme_override_fonts/normal_font = ExtResource("10_2sb77")
+bbcode_enabled = true
+text = "This is a Dialogue Box test"
+
+[node name="Dialoguebox Sprite" type="Panel" parent="Dialogue Manager/DialogueBox"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2sb77")
+
+[connection signal="timeout" from="ScreenView/Hack1/Passcode/Timer" to="ScreenView/Hack1/Passcode" method="_on_timer_timeout"]
+[connection signal="pressed" from="ScreenView/Control/Button" to="ScreenView/Control/Button" method="_on_pressed"]
