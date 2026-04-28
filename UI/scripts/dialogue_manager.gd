@@ -36,7 +36,7 @@ func advance_dialogue():
 		dialogue_text.text = dialogue_lines[current_line_index]
 	else:
 		#unpasue the game when done
-		get_tree().pause = false
+		get_tree().paused = false
 		
 		is_dialogue_active = false
 		dialogue_box.visible = false
