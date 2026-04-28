@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://ctbe527gljv6s"]
+[gd_scene load_steps=39 format=3 uid="uid://ctbe527gljv6s"]
 
 [ext_resource type="MeshLibrary" uid="uid://dc3wtlwhgbhq2" path="res://models/MeshLibrary.tres" id="1_02re4"]
 [ext_resource type="Script" uid="uid://d5hpfhnv5s3t" path="res://scripts/main_level.gd" id="1_6rdlt"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bjwvpptkd85e6" path="res://scripts/passcode.gd" id="4_bq26l"]
 [ext_resource type="PackedScene" uid="uid://cagyt83b2dyf5" path="res://scenes/hacking_space.tscn" id="4_k5pu3"]
 [ext_resource type="Script" uid="uid://c8u77arlgrtue" path="res://scripts/button.gd" id="5_djt6b"]
+[ext_resource type="Script" uid="uid://bhyk7oc8p2o2q" path="res://scripts/deletable_text.gd" id="5_rcrbw"]
 [ext_resource type="PackedScene" uid="uid://cobxg2ygsalwh" path="res://models/ServerDoor.gltf" id="7_u2c82"]
 [ext_resource type="PackedScene" uid="uid://bfs7bfeyw4slp" path="res://models/Keyboard_Model.gltf" id="9_iycfq"]
 [ext_resource type="PackedScene" uid="uid://byie1sjpywlxi" path="res://models/Keycard.gltf" id="10_rcrbw"]
@@ -124,20 +125,48 @@ data = {
 }
 
 [node name="HackingSpace" parent="." node_paths=PackedStringArray("hackable") instance=ExtResource("4_k5pu3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9872136, 0.155087, -9.060685)
-hackable = NodePath("../ScreenView/Hack1/Passcode")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.987, 0.1, -9.061)
+hackable = NodePath("../ScreenView/Camera2D/Hack1/Passcode")
+
+[node name="HackingSpace2" parent="." node_paths=PackedStringArray("hackable") instance=ExtResource("4_k5pu3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.1, -9)
+hackable = NodePath("../ScreenView/Camera2D/Kill1/DeletableText")
 
 [node name="ScreenView" type="SubViewport" parent="."]
 transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 4
 
-[node name="Hack1" type="Control" parent="ScreenView"]
+[node name="Camera2D" type="Camera2D" parent="ScreenView"]
+
+[node name="Phone1" type="Node2D" parent="ScreenView/Camera2D"]
+visible = false
+
+[node name="Camera2D" type="Camera2D" parent="ScreenView/Camera2D/Phone1"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ScreenView/Camera2D/Phone1/Camera2D"]
+texture = ExtResource("3_bdrgs")
+
+[node name="Control" type="Control" parent="ScreenView/Camera2D"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="ScreenView/Camera2D/Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Hello"
+script = ExtResource("5_djt6b")
+
+[node name="Hack1" type="Control" parent="ScreenView/Camera2D"]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 
-[node name="HackingTime" type="Label" parent="ScreenView/Hack1"]
+[node name="HackingTime" type="Label" parent="ScreenView/Camera2D/Hack1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -153,7 +182,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "Hacking Time!"
 
-[node name="DoorID" type="Label" parent="ScreenView/Hack1"]
+[node name="DoorID" type="Label" parent="ScreenView/Camera2D/Hack1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -169,7 +198,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "Door ID:"
 
-[node name="Passcode" type="Label" parent="ScreenView/Hack1"]
+[node name="Passcode" type="Label" parent="ScreenView/Camera2D/Hack1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -186,30 +215,49 @@ theme_override_font_sizes/font_size = 32
 script = ExtResource("4_bq26l")
 passcodeString = "Open Sesame!"
 
-[node name="Timer" type="Timer" parent="ScreenView/Hack1/Passcode"]
+[node name="Timer" type="Timer" parent="ScreenView/Camera2D/Hack1/Passcode"]
 one_shot = true
 
-[node name="Phone1" type="Node2D" parent="ScreenView"]
-visible = false
-
-[node name="Camera2D" type="Camera2D" parent="ScreenView/Phone1"]
-
-[node name="Sprite2D" type="Sprite2D" parent="ScreenView/Phone1/Camera2D"]
-texture = ExtResource("3_bdrgs")
-
-[node name="Control" type="Control" parent="ScreenView"]
+[node name="Kill1" type="Control" parent="ScreenView/Camera2D"]
 visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="ScreenView/Control"]
+[node name="DeletableText" type="Label" parent="ScreenView/Camera2D/Kill1"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Hello"
-script = ExtResource("5_djt6b")
+offset_left = -132.0
+offset_top = -60.0
+offset_right = 52.0
+offset_bottom = -15.0
+theme_override_colors/font_color = Color(1, 0.10980392, 0.17254902, 1)
+theme_override_font_sizes/font_size = 32
+text = "closed, NOT"
+script = ExtResource("5_rcrbw")
+
+[node name="Timer" type="Timer" parent="ScreenView/Camera2D/Kill1/DeletableText"]
+one_shot = true
+
+[node name="StaticText1" type="Label" parent="ScreenView/Camera2D/Kill1"]
+layout_mode = 0
+offset_left = -215.0
+offset_top = -109.0
+offset_right = 216.0
+offset_bottom = -16.0
+theme_override_font_sizes/font_size = 32
+text = "Procedure: keep connected door "
+autowrap_mode = 2
+
+[node name="StaticText2" type="Label" parent="ScreenView/Camera2D/Kill1"]
+layout_mode = 0
+offset_left = -210.0
+offset_top = -61.0
+offset_right = 218.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 32
+text = "                                  opened; otherwise, vile hackers will etner our premises!"
+autowrap_mode = 2
 
 [node name="Node3D" type="Node3D" parent="."]
 
@@ -284,5 +332,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.468711, 0, 4.9221106)
 
 [connection signal="area_entered" from="PlayerCamera/PlayerArea" to="PlayerCamera" method="_on_player_area_area_entered"]
 [connection signal="area_exited" from="PlayerCamera/PlayerArea" to="PlayerCamera" method="_on_player_area_area_exited"]
-[connection signal="timeout" from="ScreenView/Hack1/Passcode/Timer" to="ScreenView/Hack1/Passcode" method="_on_timer_timeout"]
-[connection signal="pressed" from="ScreenView/Control/Button" to="ScreenView/Control/Button" method="_on_pressed"]
+[connection signal="pressed" from="ScreenView/Camera2D/Control/Button" to="ScreenView/Camera2D/Control/Button" method="_on_pressed"]
+[connection signal="timeout" from="ScreenView/Camera2D/Hack1/Passcode/Timer" to="ScreenView/Camera2D/Hack1/Passcode" method="_on_timer_timeout"]
+[connection signal="timeout" from="ScreenView/Camera2D/Kill1/DeletableText/Timer" to="ScreenView/Camera2D/Kill1/DeletableText" method="_on_timer_timeout"]
