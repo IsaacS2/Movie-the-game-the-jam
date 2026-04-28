@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ctbe527gljv6s"]
+[gd_scene load_steps=21 format=3 uid="uid://ctbe527gljv6s"]
 
 [ext_resource type="MeshLibrary" uid="uid://dc3wtlwhgbhq2" path="res://models/MeshLibrary.tres" id="1_02re4"]
 [ext_resource type="Script" uid="uid://d5hpfhnv5s3t" path="res://scripts/main_level.gd" id="1_6rdlt"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://cagyt83b2dyf5" path="res://scenes/hacking_space.tscn" id="4_k5pu3"]
 [ext_resource type="Script" uid="uid://c8u77arlgrtue" path="res://scripts/button.gd" id="5_djt6b"]
 [ext_resource type="PackedScene" uid="uid://cobxg2ygsalwh" path="res://models/ServerDoor.gltf" id="7_u2c82"]
+[ext_resource type="Script" uid="uid://di0tpuetdpoyy" path="res://UI/scripts/dialogue_manager.gd" id="9_5fr2l"]
+[ext_resource type="FontFile" uid="uid://ds55sq32soata" path="res://UI/Font/Mad Pixels.otf" id="10_2sb77"]
+[ext_resource type="Texture2D" uid="uid://e72iyclc2uhk" path="res://UI/2D/Dialogue box.webp" id="11_2sb77"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyih8"]
 
@@ -33,6 +36,9 @@ background_mode = 2
 sky = SubResource("Sky_bdrgs")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2sb77"]
+texture = ExtResource("11_2sb77")
 
 [node name="MainLevel" type="Node3D"]
 script = ExtResource("1_6rdlt")
@@ -183,6 +189,48 @@ script = ExtResource("5_djt6b")
 
 [node name="blockbench_export" parent="." instance=ExtResource("7_u2c82")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -7)
+
+[node name="Dialogue Manager" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("9_5fr2l")
+
+[node name="DialogueBox" type="Control" parent="Dialogue Manager"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogueText" type="RichTextLabel" parent="Dialogue Manager/DialogueBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 110.0
+offset_top = 45.0
+offset_right = 110.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0.07391659, 0.48251325, 1)
+theme_override_fonts/normal_font = ExtResource("10_2sb77")
+bbcode_enabled = true
+text = "This is a Dialogue Box test"
+
+[node name="Dialoguebox Sprite" type="Panel" parent="Dialogue Manager/DialogueBox"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2sb77")
 
 [connection signal="timeout" from="ScreenView/Hack1/Passcode/Timer" to="ScreenView/Hack1/Passcode" method="_on_timer_timeout"]
 [connection signal="pressed" from="ScreenView/Control/Button" to="ScreenView/Control/Button" method="_on_pressed"]
