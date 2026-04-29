@@ -65,7 +65,6 @@ func _process(_delta: float) -> void:
 
 func _physics_process(_delta: float) -> void:
 	if (checkArea):
-		print("checking")
 		_check_for_areas()
 
 
@@ -82,8 +81,6 @@ func _turn_to_direction(newDirection : FACING) -> void:
 		FACING.SOUTH:
 			movingDirection = Vector3(-1, 0, 0)
 	
-	print(currentRotation)
-	
 	transform.basis = Basis()
 	transform.basis = Basis(Vector3.UP, (PI * currentRotation) / 2) * transform.basis
 
@@ -93,9 +90,7 @@ func _check_for_areas() -> void:
 	
 	if (playerArea.has_overlapping_areas()):
 		var area = playerArea.get_overlapping_areas()[0]
-		print("psace checked")
 		if (area is HackingSpace):
-			print("psace entered")
 			hackArea = area
 			canHack = true
 			label.visible = true
@@ -106,7 +101,6 @@ func _check_for_areas() -> void:
 
 
 func _return_movement() -> void:
-	print("inisivre")
 	screenMesh.visible = false
 	immobile = false
 	label.visible = false
