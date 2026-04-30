@@ -6,7 +6,6 @@ extends Node3D
 @onready var node_viewport = $ScreenView
 @onready var node_quad = %ScreenMesh
 @onready var node_area = %ScreenMesh/Area3D
-
 # Used for checking if the mouse is inside the Area3D.
 var is_mouse_inside = false
 # The last processed input touch/mouse event. To calculate relative movement.
@@ -16,20 +15,7 @@ var last_event_time: float = -1.0
 
 
 func _ready():
-	# Clear the viewport.
-	var viewport = $ScreenView
-	$ScreenView.set_clear_mode(SubViewport.CLEAR_MODE_ONCE)
-	
-	# Retrieve the texture and set it to the viewport quad.
-	%ScreenMesh.material_override.albedo_texture = viewport.get_texture()
-	
-	node_area.mouse_entered.connect(_mouse_entered_area)
-	node_area.mouse_exited.connect(_mouse_exited_area)
-	node_area.input_event.connect(_mouse_input_event)
-
-	# If the material is NOT set to use billboard settings, then avoid running billboard specific code
-	if node_quad.get_surface_override_material(0).billboard_mode == BaseMaterial3D.BillboardMode.BILLBOARD_DISABLED:
-		set_process(false)
+	pass
 
 
 func _mouse_entered_area():
@@ -41,13 +27,7 @@ func _mouse_exited_area():
 
 
 func _unhandled_input(event):
-	# Check if the event is a non-mouse/non-touch event
-	for mouse_event in [InputEventMouseButton, InputEventMouseMotion, InputEventScreenDrag, InputEventScreenTouch]:
-		if is_instance_of(event, mouse_event):
-			# If the event is a mouse/touch event, then we can ignore it here, because it will be
-			# handled via Physics Picking.
-			return
-	node_viewport.push_input(event)
+	pass
 
 
 func _mouse_input_event(_camera: Camera3D, event: InputEvent, event_position: Vector3, _normal: Vector3, _shape_idx: int):

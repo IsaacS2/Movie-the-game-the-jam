@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3pnxr2juv35q"
-path="res://.godot/imported/Dialogue box.png-64c66da8d98d3b3fcac48260c7f5434b.ctex"
+uid="uid://c62jfv5m6ncx0"
+path="res://.godot/imported/record-indicator.png-e93ee680841ed2535d305ba2751d1f80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/2D/Dialogue box.png"
-dest_files=["res://.godot/imported/Dialogue box.png-64c66da8d98d3b3fcac48260c7f5434b.ctex"]
+source_file="res://UI/2D/record-indicator.png"
+dest_files=["res://.godot/imported/record-indicator.png-e93ee680841ed2535d305ba2751d1f80.ctex"]
 
 [params]
 
-compress/mode=4
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -32,7 +32,7 @@ process/channel_remap/green=1
 process/channel_remap/blue=2
 process/channel_remap/alpha=3
 process/fix_alpha_border=true
-process/premult_alpha=true
+process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
