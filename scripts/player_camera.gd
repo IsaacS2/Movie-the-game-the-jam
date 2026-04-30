@@ -4,6 +4,8 @@ extends Camera3D
 
 enum FACING {EAST, NORTH, WEST, SOUTH}
 
+@onready var rayCast: RayCast3D = $RayCastFront
+@onready var rayCastBack: RayCast3D = $RayCastBack
 @onready var screenMesh: MeshInstance3D = %ScreenMesh
 @onready var playerArea: Area3D = $PlayerArea
 @onready var label: Label = $Control/Label
@@ -38,6 +40,7 @@ func _process(_delta: float) -> void:
 		turningDirection = int(Input.is_action_just_pressed("ui_left")) - int(Input.is_action_just_pressed("ui_right"))
 		
 		if (movingInput != 0):
+			print(movingInput)
 			var desiredSpace : Vector3 = facility.local_to_map(position) # get map position
 			desiredSpace += movingInput * movingDirection
 			
@@ -45,8 +48,10 @@ func _process(_delta: float) -> void:
 			desiredSpace = facility.map_to_local(desiredSpace) # get local position
 			
 			if (facility and cellCheck > -1): # and check that player's not going through wall):
-				position = desiredSpace + cameraHeight + Vector3(0, 0, 0)
-				checkArea = true
+				if ((!rayCast.is_colliding() or movingInput > -1) and (!rayCastBack.is_colliding() or movingInput < 1)):
+					position = desiredSpace + cameraHeight + Vector3(0, 0, 0)
+					if (rayCast): rayCast.force_raycast_update()
+					checkArea = true
 		
 		elif (turningDirection != 0):
 			currentRotation += turningDirection
@@ -112,5 +117,6 @@ func _on_player_area_area_entered(area: Area3D) -> void:
 
 
 func _on_player_area_area_exited(area: Area3D) -> void:
-	pass
-	#_check_for_areas()
+	checkArea = false
+	canHack = false
+	label.visible = false

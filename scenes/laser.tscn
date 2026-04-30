@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://do3mjq3lqhfmw"]
+
+[ext_resource type="PackedScene" uid="uid://b6ql4bl1258yb" path="res://models/Laser.gltf" id="1_a7dhc"]
+[ext_resource type="PackedScene" uid="uid://dn5i2tsfc1kya" path="res://models/LaserEmitter.gltf" id="2_jjj73"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5no5p"]
+size = Vector3(1.5, 2, 1.5)
+
+[node name="Laser" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_5no5p")
+
+[node name="blockbench_export" parent="." instance=ExtResource("1_a7dhc")]
+transform = Transform3D(0.35355338, -0.35355338, 0, 0.35355338, 0.35355338, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="blockbench_export2" parent="." instance=ExtResource("2_jjj73")]
+transform = Transform3D(0.35355338, -0.35355338, 0, 0.35355338, 0.35355338, 0, 0, 0, 0.5, -0.35, 0.35, 0)

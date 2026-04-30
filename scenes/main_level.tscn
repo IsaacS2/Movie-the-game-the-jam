@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://ctbe527gljv6s"]
+[gd_scene load_steps=46 format=3 uid="uid://ctbe527gljv6s"]
 
 [ext_resource type="MeshLibrary" uid="uid://dc3wtlwhgbhq2" path="res://models/MeshLibrary.tres" id="1_02re4"]
 [ext_resource type="Script" uid="uid://d5hpfhnv5s3t" path="res://scripts/main_level.gd" id="1_6rdlt"]
@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://ds13wh2e7drv1" path="res://models/Fire_Alarm.gltf" id="27_nstfs"]
 [ext_resource type="PackedScene" uid="uid://bfljt63sb28v" path="res://models/FloppyD.gltf" id="28_urjsn"]
 [ext_resource type="PackedScene" uid="uid://blar2hj37q8fr" path="res://models/Green_Exitsign.gltf" id="29_njqd0"]
+[ext_resource type="PackedScene" uid="uid://do3mjq3lqhfmw" path="res://scenes/laser.tscn" id="36_7ul7a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyih8"]
 albedo_color = Color(0, 0, 0, 1)
@@ -70,7 +71,7 @@ texture = ExtResource("11_2sb77")
 script = ExtResource("1_6rdlt")
 
 [node name="PlayerCamera" type="Camera3D" parent="." node_paths=PackedStringArray("facility") groups=["player"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.11477846)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7854204, 0.11477846)
 script = ExtResource("2_bdrgs")
 facility = NodePath("../Facility")
 
@@ -260,8 +261,13 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerCamera/ScreenMesh/Area3D"]
 shape = SubResource("BoxShape3D_yyih8")
 
-[node name="RayCast3D" type="RayCast3D" parent="PlayerCamera"]
+[node name="RayCastFront" type="RayCast3D" parent="PlayerCamera"]
 visible = false
+target_position = Vector3(0, 0, -2)
+
+[node name="RayCastBack" type="RayCast3D" parent="PlayerCamera"]
+visible = false
+target_position = Vector3(0, 0, 2)
 
 [node name="PlayerArea" type="Area3D" parent="PlayerCamera"]
 
@@ -287,7 +293,7 @@ data = {
 [node name="HackingSpace" parent="HackSpaces" node_paths=PackedStringArray("hackable", "destructible") instance=ExtResource("4_k5pu3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.987, 0.1, -9.061)
 hackable = NodePath("../../PlayerCamera/Control/Hack1/Passcode")
-destructible = NodePath("../../laser")
+destructible = NodePath("../../Laser")
 
 [node name="HackingSpace2" parent="HackSpaces" node_paths=PackedStringArray("hackable") instance=ExtResource("4_k5pu3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.1, -9)
@@ -410,8 +416,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_2sb77")
 
-[node name="laser" parent="." instance=ExtResource("12_gr2jy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9550321, 0, -10.8542795)
+[node name="Laser" parent="." instance=ExtResource("36_7ul7a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.5, -11)
 
 [connection signal="timeout" from="PlayerCamera/Control/Hack1/Passcode/Timer" to="PlayerCamera/Control/Hack1/Passcode" method="_on_timer_timeout"]
 [connection signal="timeout" from="PlayerCamera/Control/Kill1/DeletableText/Timer" to="PlayerCamera/Control/Kill1/DeletableText" method="_on_timer_timeout"]
