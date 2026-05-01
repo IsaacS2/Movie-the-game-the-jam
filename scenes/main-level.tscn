@@ -39,6 +39,7 @@ modulate_color = Color(0.14901961, 1, 1, 1)
 
 [node name="Dialog" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1.0
