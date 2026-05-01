@@ -1,0 +1,177 @@
+[gd_scene load_steps=10 format=3 uid="uid://dbvbkkh4ftdy4"]
+
+[ext_resource type="FontFile" uid="uid://cg2rshescahcj" path="res://UI/Font/PixelGrunge.ttf" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://dj3imv3kf11q6" path="res://UI/scripts/main_menu.gd" id="1_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://bv6v01q1l1p5p" path="res://UI/2D/Controller icon.png" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://b4hcpakpk73km" path="res://UI/2D/Skull menu.png" id="3_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://bv0a6bn6e2ths" path="res://UI/2D/Chest Icon.png" id="3_wu84c"]
+[ext_resource type="Texture2D" uid="uid://dpl030c6135c2" path="res://UI/2D/film reel icon.png" id="4_8ln24"]
+[ext_resource type="Texture2D" uid="uid://djbbhds0r43xq" path="res://UI/2D/notepad clipart.png" id="5_oa1go"]
+[ext_resource type="Texture2D" uid="uid://bme8217f62y0u" path="res://UI/2D/gear icon.png" id="5_rtw2f"]
+[ext_resource type="Script" uid="uid://df7j4dtsaxhm8" path="res://UI/scripts/instructions.gd" id="9_jk1qb"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_tbmy8")
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_right = 640.0
+offset_bottom = 480.0
+theme_override_colors/default_color = Color(0, 0.89573556, 0.83116233, 1)
+theme_override_colors/font_shadow_color = Color(0.80888695, 0, 0.7227015, 0.85700005)
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/normal_font = ExtResource("1_l6cm7")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[rainbow freq=0.3]Hackers:[/rainbow] 
+[shake] H4CK3D"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_top = 200.0
+offset_right = 640.0
+offset_bottom = 680.0
+
+[node name="CreditsMenu" type="VBoxContainer" parent="CenterContainer"]
+visible = false
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Credits" type="RichTextLabel" parent="CenterContainer/CreditsMenu"]
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Joseph Houston
+Lamont Ewing
+"
+autowrap_mode = 2
+
+[node name="back" type="Button" parent="CenterContainer/CreditsMenu"]
+layout_mode = 2
+text = "Back <-"
+
+[node name="MainButtons" type="HBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Play" type="Button" parent="CenterContainer/MainButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 19
+text = "ST4RT G4M3.exe"
+icon = ExtResource("2_ekxnf")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Extras" type="Button" parent="CenterContainer/MainButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 19
+text = "EX7R4S.zip"
+icon = ExtResource("3_wu84c")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Trailer link" type="Button" parent="CenterContainer/MainButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 19
+text = "TR41L3R.mov"
+icon = ExtResource("4_8ln24")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Help" type="Button" parent="CenterContainer/MainButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 19
+text = "H3LP.txt"
+icon = ExtResource("5_oa1go")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Settings" type="Button" parent="CenterContainer/MainButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 19
+text = "0PT10NS.ini"
+icon = ExtResource("5_rtw2f")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="SettingsMenu" type="VBoxContainer" parent="CenterContainer"]
+visible = false
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="back" type="Button" parent="CenterContainer/SettingsMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3475012, 0.5468543, 0.86981654, 1)
+text = "Back <-"
+
+[node name="fullscreen" type="CheckBox" parent="CenterContainer/SettingsMenu"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "FULLSCREEN"
+
+[node name="mainvolslider" type="HSlider" parent="CenterContainer/SettingsMenu"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/SettingsMenu/mainvolslider"]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 40.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "MAIN VOLUME"
+horizontal_alignment = 1
+
+[node name="SkullMenu" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(319, 240)
+texture = ExtResource("3_bqqt6")
+
+[node name="Instructions" type="RichTextLabel" parent="."]
+offset_right = 640.0
+offset_bottom = 480.0
+bbcode_enabled = true
+text = "THE HACKER REVOLUTION WILL BE HACKIVISED!
+Crash Override, Acid Burn, and whatever Matthew Lillard's character name was need"
+script = ExtResource("9_jk1qb")
+
+[node name="ColorRect" type="ColorRect" parent="Instructions"]
+z_index = -1
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+color = Color(0.12835406, 0.12835406, 0.12835406, 0.81200004)
+
+[node name="TweenTextTrigger" type="VisibleOnScreenEnabler2D" parent="."]
+visible = false
+rect = Rect2(-10, -10, 663, 484)
+
+[connection signal="pressed" from="CenterContainer/MainButtons/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/Extras" to="." method="_on_extras_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/Trailer link" to="." method="_on_trailer_link_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/Help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="CenterContainer/MainButtons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CenterContainer/SettingsMenu/back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="CenterContainer/SettingsMenu/fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="value_changed" from="CenterContainer/SettingsMenu/mainvolslider" to="." method="_on_mainvolslider_value_changed"]
+[connection signal="screen_entered" from="TweenTextTrigger" to="." method="_on_tween_text_trigger_screen_entered"]

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Movie-Game-Jam"
-run/main_scene="uid://ctbe527gljv6s"
+run/main_scene="uid://dbvbkkh4ftdy4"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://scripts/Global.gd"
 
 [display]
 
