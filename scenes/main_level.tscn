@@ -1,48 +1,32 @@
-[gd_scene load_steps=45 format=3 uid="uid://ctbe527gljv6s"]
+[gd_scene load_steps=30 format=3 uid="uid://ctbe527gljv6s"]
 
 [ext_resource type="MeshLibrary" uid="uid://dc3wtlwhgbhq2" path="res://models/MeshLibrary.tres" id="1_02re4"]
 [ext_resource type="Script" uid="uid://d5hpfhnv5s3t" path="res://scripts/main_level.gd" id="1_6rdlt"]
 [ext_resource type="Script" uid="uid://ckk7ocxscigps" path="res://scripts/player_camera.gd" id="2_bdrgs"]
+[ext_resource type="Texture2D" uid="uid://ipkx2ogkf34a" path="res://icon.svg" id="3_bdrgs"]
 [ext_resource type="Script" uid="uid://bjwvpptkd85e6" path="res://scripts/passcode.gd" id="4_bq26l"]
 [ext_resource type="PackedScene" uid="uid://cagyt83b2dyf5" path="res://scenes/hacking_space.tscn" id="4_k5pu3"]
-[ext_resource type="Texture2D" uid="uid://dcpo1lersot0o" path="res://UI/2D/barOutline.png" id="5_pfmml"]
-[ext_resource type="Script" uid="uid://bhyk7oc8p2o2q" path="res://scripts/deletable_text.gd" id="5_rcrbw"]
-[ext_resource type="Texture2D" uid="uid://dsnlunmx33yu" path="res://UI/2D/barFill.png" id="6_7ul7a"]
-[ext_resource type="Script" uid="uid://df650cbe5yp1b" path="res://scripts/phone_progress.gd" id="7_kxeow"]
-[ext_resource type="PackedScene" uid="uid://cobxg2ygsalwh" path="res://models/ServerDoor.gltf" id="7_u2c82"]
-[ext_resource type="Texture2D" uid="uid://c62jfv5m6ncx0" path="res://UI/2D/record-indicator.png" id="8_gwyuf"]
-[ext_resource type="Script" uid="uid://di0tpuetdpoyy" path="res://UI/scripts/dialogue_manager.gd" id="9_5fr2l"]
-[ext_resource type="PackedScene" uid="uid://bfs7bfeyw4slp" path="res://models/Keyboard_Model.gltf" id="9_iycfq"]
-[ext_resource type="FontFile" uid="uid://ds55sq32soata" path="res://UI/Font/Mad Pixels.otf" id="10_2sb77"]
-[ext_resource type="PackedScene" uid="uid://byie1sjpywlxi" path="res://models/Keycard.gltf" id="10_rcrbw"]
-[ext_resource type="Texture2D" uid="uid://e72iyclc2uhk" path="res://UI/2D/Dialogue box.webp" id="11_2sb77"]
-[ext_resource type="PackedScene" uid="uid://coag1knxd3v74" path="res://models/Keypad.gltf" id="11_c88u2"]
-[ext_resource type="PackedScene" uid="uid://b6ql4bl1258yb" path="res://models/Laser.gltf" id="12_gr2jy"]
-[ext_resource type="PackedScene" uid="uid://5c2e4xc8tfr0" path="res://models/MilkCrate.gltf" id="13_3iae7"]
-[ext_resource type="PackedScene" uid="uid://dhjso6dx3hyj4" path="res://models/Monitor.gltf" id="14_cycrt"]
-[ext_resource type="PackedScene" uid="uid://b136if0dw0uen" path="res://models/NamePlate.gltf" id="15_pfmml"]
-[ext_resource type="PackedScene" uid="uid://dox1e0mtojwpc" path="res://models/OfficePhone.gltf" id="16_7ul7a"]
-[ext_resource type="PackedScene" uid="uid://cjbc24rn886u8" path="res://models/paperStack.gltf" id="17_kxeow"]
-[ext_resource type="PackedScene" uid="uid://dvccg44pmyi2c" path="res://models/pipe_end.gltf" id="18_gwyuf"]
-[ext_resource type="PackedScene" uid="uid://1vi1i2qp5gfy" path="res://models/Printer.gltf" id="19_yl4j0"]
-[ext_resource type="PackedScene" uid="uid://db3me3s7oy81q" path="res://models/Recorder.gltf" id="20_hdbb3"]
-[ext_resource type="PackedScene" uid="uid://do56iecnwq2h6" path="res://models/Server_Box.gltf" id="21_uxuvg"]
-[ext_resource type="PackedScene" uid="uid://drq3bb4kar751" path="res://models/Closed_FilingCab.gltf" id="22_eokwq"]
-[ext_resource type="PackedScene" uid="uid://cya82h0wsf07c" path="res://models/CornerDesk.gltf" id="23_nk5s2"]
-[ext_resource type="PackedScene" uid="uid://hqmby83fkmb7" path="res://models/Desk.gltf" id="24_xgm4f"]
-[ext_resource type="PackedScene" uid="uid://dn1vvoypy6rdg" path="res://models/Fax.gltf" id="25_gvvxt"]
-[ext_resource type="PackedScene" uid="uid://qtfdlcmiyx0h" path="res://models/Filing_Cabinet.gltf" id="26_qdukv"]
-[ext_resource type="PackedScene" uid="uid://ds13wh2e7drv1" path="res://models/Fire_Alarm.gltf" id="27_nstfs"]
-[ext_resource type="PackedScene" uid="uid://bfljt63sb28v" path="res://models/FloppyD.gltf" id="28_urjsn"]
-[ext_resource type="PackedScene" uid="uid://blar2hj37q8fr" path="res://models/Green_Exitsign.gltf" id="29_njqd0"]
+[ext_resource type="Script" uid="uid://c8u77arlgrtue" path="res://scripts/button.gd" id="5_djt6b"]
+[ext_resource type="MeshLibrary" uid="uid://cmfu2g6k42xcd" path="res://scenes/tileLibrary.tres" id="9_iqu8w"]
+[ext_resource type="PackedScene" uid="uid://4axxnjn231n" path="res://models/WholeOfficeDoor.gltf" id="9_uk2yf"]
+[ext_resource type="PackedScene" uid="uid://b1kwyl2t4uab6" path="res://models/GenericServerDoor.gltf" id="10_ondrs"]
+[ext_resource type="PackedScene" uid="uid://2mcp32pnynix" path="res://models/BlueServerDoor.gltf" id="11_0e4v7"]
+[ext_resource type="PackedScene" uid="uid://f038a5gwm1od" path="res://models/blueKeycard.gltf" id="12_6nivd"]
+[ext_resource type="PackedScene" uid="uid://belv0qedvyuqs" path="res://models/OfficeDoor.gltf" id="13_al56o"]
+[ext_resource type="PackedScene" uid="uid://cdop46c7cnvvk" path="res://models/WholeFireExit.gltf" id="14_1bmon"]
+[ext_resource type="PackedScene" uid="uid://l05wt5ghay52" path="res://models/WholeYellowTile.gltf" id="15_siio1"]
+[ext_resource type="PackedScene" uid="uid://w0r61bd3l73x" path="res://models/yellowKeycard.gltf" id="16_ndwfr"]
+[ext_resource type="PackedScene" uid="uid://dqlfxxefr7f6n" path="res://models/YellowServerDoor.gltf" id="17_ondrs"]
+[ext_resource type="PackedScene" uid="uid://dlqcbxd4x8it4" path="res://models/WholeBlueTile.gltf" id="18_al56o"]
+[ext_resource type="PackedScene" uid="uid://ddc2abolt0ull" path="res://models/redKeycard.gltf" id="19_1bmon"]
+[ext_resource type="PackedScene" uid="uid://20ki6uucfjvm" path="res://models/WholeRedTile.gltf" id="20_siio1"]
+[ext_resource type="PackedScene" uid="uid://b6ql4bl1258yb" path="res://models/Laser.gltf" id="21_1bmon"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yyih8"]
-albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_yyih8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djt6b"]
-albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yyih8"]
 size = Vector3(1, 1, 0.1)
@@ -63,9 +47,6 @@ sky = SubResource("Sky_bdrgs")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2sb77"]
-texture = ExtResource("11_2sb77")
-
 [node name="MainLevel" type="Node3D"]
 script = ExtResource("1_6rdlt")
 
@@ -74,39 +55,76 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.11477846)
 script = ExtResource("2_bdrgs")
 facility = NodePath("../Facility")
 
-[node name="Control" type="Control" parent="PlayerCamera"]
-layout_mode = 3
-anchors_preset = 0
+[node name="ScreenMesh" type="MeshInstance3D" parent="PlayerCamera"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.115)
+material_override = SubResource("StandardMaterial3D_yyih8")
+mesh = SubResource("QuadMesh_yyih8")
+surface_material_override/0 = SubResource("StandardMaterial3D_djt6b")
 
-[node name="Label" type="Label" parent="PlayerCamera/Control"]
+[node name="Area3D" type="Area3D" parent="PlayerCamera/ScreenMesh"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerCamera/ScreenMesh/Area3D"]
+shape = SubResource("BoxShape3D_yyih8")
+
+[node name="RayCast3D" type="RayCast3D" parent="PlayerCamera"]
 visible = false
-z_index = 100
-layout_mode = 1
+
+[node name="PlayerArea" type="Area3D" parent="PlayerCamera"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerCamera/PlayerArea"]
+shape = SubResource("BoxShape3D_8ra5a")
+
+[node name="Label" type="Label" parent="PlayerCamera"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 250.0
-offset_top = 32.0
-offset_right = 419.0
-offset_bottom = 55.0
+offset_left = -84.5
+offset_top = 201.0
+offset_right = 84.5
+offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Press [Space] to Hack!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Hack1" type="Control" parent="PlayerCamera/Control"]
-visible = false
-anchors_preset = 0
-offset_left = 315.0
-offset_top = 289.0
-offset_right = 315.0
-offset_bottom = 289.0
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yyih8")
 
-[node name="HackingTime" type="Label" parent="PlayerCamera/Control/Hack1"]
-layout_mode = 0
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-1, -8.742277e-08, -3.8213705e-15, 0, -4.3711385e-08, 0.99999994, -8.742278e-08, 0.99999994, 4.3711385e-08, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Facility" type="GridMap" parent="."]
+mesh_library = ExtResource("1_02re4")
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 0, 65535, 1048576, 0, 65534, 655360, 0, 65533, 1048576, 0, 65532, 0, 0, 65531, 655360, 65534, 65531, 1048581, 65535, 65531, 655360, 1, 65531, 655360, 2, 65531, 1441797, 65535, 0, 0, 0, 1, 0, 2, 2, 0, 65535, 1, 0, 1, 1, 0, 2, 1, 0, 1, 2, 0, 0, 2, 0, 65535, 2, 0, 65534, 2, 0, 65534, 1, 0, 65534, 0, 0, 65534, 3, 0, 65535, 3, 0, 0, 3, 0, 1, 3, 0, 2, 3, 0, 0, 65530, 0, 0, 65529, 0, 0, 65528, 0, 65535, 65526, 0, 0, 65526, 0, 1, 65526, 0, 1, 65527, 0, 0, 65527, 0, 65535, 65527, 0)
+}
+
+[node name="HackingSpace" parent="." node_paths=PackedStringArray("hackable") instance=ExtResource("4_k5pu3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9872136, 0.155087, -9.060685)
+hackable = NodePath("../ScreenView/Hack1/Passcode")
+
+[node name="ScreenView" type="SubViewport" parent="."]
+transparent_bg = true
+handle_input_locally = false
+
+[node name="Hack1" type="Control" parent="ScreenView"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 640.0
+offset_top = -2.0
+offset_right = 640.0
+offset_bottom = -2.0
+
+[node name="HackingTime" type="Label" parent="ScreenView/Hack1"]
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -118,152 +136,63 @@ offset_bottom = -154.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
-text = "Mash to Hack!"
+text = "Hacking Time!"
 
-[node name="DoorID" type="Label" parent="PlayerCamera/Control/Hack1"]
-layout_mode = 0
+[node name="DoorID" type="Label" parent="ScreenView/Hack1"]
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -184.0
-offset_top = -20.0
-offset_right = -54.0
-offset_bottom = 25.0
+offset_left = -278.0
+offset_top = -20.5
+offset_right = -148.0
+offset_bottom = 24.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "Door ID:"
 
-[node name="Passcode" type="Label" parent="PlayerCamera/Control/Hack1"]
-layout_mode = 0
+[node name="Passcode" type="Label" parent="ScreenView/Hack1"]
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -51.0
-offset_top = -20.0
-offset_right = 166.0
-offset_bottom = 25.0
+offset_left = -145.0
+offset_top = -20.5
+offset_right = 72.0
+offset_bottom = 24.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 script = ExtResource("4_bq26l")
-passcodeString = "Open Sesame!"
 
-[node name="Timer" type="Timer" parent="PlayerCamera/Control/Hack1/Passcode"]
-one_shot = true
+[node name="Timer" type="Timer" parent="ScreenView/Hack1/Passcode"]
 
-[node name="Kill1" type="Control" parent="PlayerCamera/Control"]
+[node name="Phone1" type="Node2D" parent="ScreenView"]
 visible = false
+
+[node name="Camera2D" type="Camera2D" parent="ScreenView/Phone1"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ScreenView/Phone1/Camera2D"]
+texture = ExtResource("3_bdrgs")
+
+[node name="Control" type="Control" parent="ScreenView"]
+visible = false
+layout_mode = 3
 anchors_preset = 0
-offset_left = 330.0
-offset_top = 255.0
-offset_right = 370.0
-offset_bottom = 295.0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="DeleteTime" type="Label" parent="PlayerCamera/Control/Kill1"]
+[node name="Button" type="Button" parent="ScreenView/Control"]
 layout_mode = 0
-offset_left = -85.0
-offset_top = -134.0
-offset_right = 49.0
-offset_bottom = -100.0
-theme_override_font_sizes/font_size = 24
-text = "Delete text!"
-
-[node name="DeletableText" type="Label" parent="PlayerCamera/Control/Kill1"]
-layout_mode = 0
-offset_left = -218.0
-offset_top = -51.0
-offset_right = -34.0
-offset_bottom = -6.0
-theme_override_colors/font_color = Color(1, 0.10980392, 0.17254902, 1)
-theme_override_font_sizes/font_size = 24
-text = "closed, NOT"
-script = ExtResource("5_rcrbw")
-
-[node name="Timer" type="Timer" parent="PlayerCamera/Control/Kill1/DeletableText"]
-one_shot = true
-
-[node name="StaticText1" type="Label" parent="PlayerCamera/Control/Kill1"]
-layout_mode = 0
-offset_left = -216.0
-offset_top = -86.0
-offset_right = 215.0
-offset_bottom = 7.0
-theme_override_font_sizes/font_size = 24
-text = "Procedure: keep connected door "
-autowrap_mode = 2
-
-[node name="StaticText2" type="Label" parent="PlayerCamera/Control/Kill1"]
-layout_mode = 0
-offset_left = -217.0
-offset_top = -52.0
-offset_right = 211.0
-offset_bottom = 89.0
-theme_override_font_sizes/font_size = 24
-text = "                        opened; otherwise, vile hackers will etner our premises!"
-autowrap_mode = 2
-
-[node name="Phone1" type="Control" parent="PlayerCamera/Control"]
-visible = false
-anchors_preset = 0
-offset_left = 335.0
-offset_top = 212.0
-offset_right = 375.0
-offset_bottom = 252.0
-
-[node name="Progress" type="TextureProgressBar" parent="PlayerCamera/Control/Phone1"]
-layout_mode = 0
-offset_left = -170.0
-offset_top = 38.000015
-offset_right = -138.0
-offset_bottom = 198.00002
-rotation = -1.5707964
-scale = Vector2(2, 2)
-step = 0.0
-value = 54.0
-fill_mode = 2
-texture_over = ExtResource("5_pfmml")
-texture_progress = ExtResource("6_7ul7a")
-script = ExtResource("7_kxeow")
-
-[node name="Timer" type="Timer" parent="PlayerCamera/Control/Phone1/Progress"]
-one_shot = true
-
-[node name="RecordIndicator" type="Sprite2D" parent="PlayerCamera/Control/Phone1"]
-position = Vector2(3, 15)
-scale = Vector2(2, 2)
-texture = ExtResource("8_gwyuf")
-
-[node name="Label" type="Label" parent="PlayerCamera/Control/Phone1"]
-layout_mode = 0
-offset_left = -88.0
-offset_top = -72.0
-offset_right = 93.0
-offset_bottom = -38.0
-theme_override_font_sizes/font_size = 24
-text = "Time the recording!"
-
-[node name="ScreenMesh" type="MeshInstance3D" parent="PlayerCamera"]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.7)
-visible = false
-material_override = SubResource("StandardMaterial3D_yyih8")
-mesh = SubResource("QuadMesh_yyih8")
-surface_material_override/0 = SubResource("StandardMaterial3D_djt6b")
-
-[node name="Area3D" type="Area3D" parent="PlayerCamera/ScreenMesh"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerCamera/ScreenMesh/Area3D"]
-shape = SubResource("BoxShape3D_yyih8")
-
-[node name="RayCast3D" type="RayCast3D" parent="PlayerCamera"]
-visible = false
-
-[node name="PlayerArea" type="Area3D" parent="PlayerCamera"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Hello"
+script = ExtResource("5_djt6b")
 
 [node name="Facility_CC" type="GridMap" parent="."]
 mesh_library = ExtResource("9_iqu8w")
@@ -402,156 +331,6 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -20.
 
 [node name="blockbench_export2" parent="." instance=ExtResource("21_1bmon")]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -19.97, 0.6986592, 38.964344)
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerCamera/PlayerArea"]
-shape = SubResource("BoxShape3D_8ra5a")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_yyih8")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-1, -8.742277e-08, -3.8213705e-15, 0, -4.3711385e-08, 0.99999994, -8.742278e-08, 0.99999994, 4.3711385e-08, 0, 0, 0)
-shadow_enabled = true
-
-[node name="Facility" type="GridMap" parent="."]
-mesh_library = ExtResource("1_02re4")
-cell_center_y = false
-data = {
-"cells": PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 0, 65535, 1048576, 0, 65534, 655360, 0, 65533, 1048576, 0, 65532, 0, 0, 65531, 655360, 65534, 65531, 1048581, 65535, 65531, 655360, 1, 65531, 655360, 2, 65531, 1441797, 65535, 0, 0, 0, 1, 0, 2, 2, 0, 65535, 1, 0, 1, 1, 0, 2, 1, 0, 1, 2, 0, 0, 2, 0, 65535, 2, 0, 65534, 2, 0, 65534, 1, 0, 65534, 0, 0, 65534, 3, 0, 65535, 3, 0, 0, 3, 0, 1, 3, 0, 2, 3, 0, 0, 65530, 0, 0, 65529, 0, 0, 65528, 0, 65535, 65526, 0, 0, 65526, 0, 1, 65526, 0, 1, 65527, 0, 0, 65527, 0, 65535, 65527, 0)
-}
-
-[node name="HackSpaces" type="Node3D" parent="."]
-
-[node name="HackingSpace" parent="HackSpaces" node_paths=PackedStringArray("hackable", "destructible") instance=ExtResource("4_k5pu3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.987, 0.1, -9.061)
-hackable = NodePath("../../PlayerCamera/Control/Hack1/Passcode")
-destructible = NodePath("../../laser")
-
-[node name="HackingSpace2" parent="HackSpaces" node_paths=PackedStringArray("hackable") instance=ExtResource("4_k5pu3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.1, -9)
-hackable = NodePath("../../PlayerCamera/Control/Kill1/DeletableText")
-
-[node name="HackingSpace3" parent="HackSpaces" node_paths=PackedStringArray("hackable") instance=ExtResource("4_k5pu3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -13)
-hackable = NodePath("../../PlayerCamera/Control/Phone1/Progress")
-
-[node name="testBlocks" type="Node3D" parent="."]
-
-[node name="blockbench_export" parent="testBlocks" instance=ExtResource("7_u2c82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -7)
-
-[node name="blockbench_export2" parent="testBlocks" instance=ExtResource("9_iycfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6430073, 0, -1.4159722)
-
-[node name="blockbench_export3" parent="testBlocks" instance=ExtResource("10_rcrbw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4909873, 0, -0.6475878)
-
-[node name="blockbench_export4" parent="testBlocks" instance=ExtResource("11_c88u2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8009424, 0, 4.8469524)
-
-[node name="blockbench_export5" parent="testBlocks" instance=ExtResource("12_gr2jy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.020507, 0, 3.1542797)
-
-[node name="blockbench_export6" parent="testBlocks" instance=ExtResource("13_3iae7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.416307, 0, -3.5846982)
-
-[node name="blockbench_export7" parent="testBlocks" instance=ExtResource("14_cycrt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8933887, -2.3841858e-07, -3.0733914)
-
-[node name="blockbench_export8" parent="testBlocks" instance=ExtResource("15_pfmml")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.456679, 0, 5.1642113)
-
-[node name="blockbench_export9" parent="testBlocks" instance=ExtResource("16_7ul7a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.774109, 0, 2.4879518)
-
-[node name="blockbench_export10" parent="testBlocks" instance=ExtResource("17_kxeow")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.802955, 0, 7.354936)
-
-[node name="blockbench_export11" parent="testBlocks" instance=ExtResource("18_gwyuf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.627922, 0, 6.0458384)
-
-[node name="blockbench_export12" parent="testBlocks" instance=ExtResource("19_yl4j0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.233907, 0, 9.062393)
-
-[node name="blockbench_export13" parent="testBlocks" instance=ExtResource("20_hdbb3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1428204, 0, 10.391812)
-
-[node name="blockbench_export14" parent="testBlocks" instance=ExtResource("7_u2c82")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.532217, 0, 10.018032)
-
-[node name="blockbench_export15" parent="testBlocks" instance=ExtResource("21_uxuvg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.601219, 0, 12.00832)
-
-[node name="blockbench_export16" parent="testBlocks" instance=ExtResource("22_eokwq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.704066, 0, -1.5858145)
-
-[node name="blockbench_export17" parent="testBlocks" instance=ExtResource("23_nk5s2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6509247, 0, 1.4802823)
-
-[node name="blockbench_export18" parent="testBlocks" instance=ExtResource("24_xgm4f")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.95638, -0.108076334, 0.7002001)
-
-[node name="blockbench_export19" parent="testBlocks" instance=ExtResource("25_gvvxt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5888796, 0, 3.2442684)
-
-[node name="blockbench_export20" parent="testBlocks" instance=ExtResource("26_qdukv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.351586, 0, 0.7235341)
-
-[node name="blockbench_export21" parent="testBlocks" instance=ExtResource("27_nstfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.491196, 0, 5.470257)
-
-[node name="blockbench_export22" parent="testBlocks" instance=ExtResource("28_urjsn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7325106, 0, 6.959258)
-
-[node name="blockbench_export23" parent="testBlocks" instance=ExtResource("29_njqd0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.468711, 0, 4.9221106)
-
-[node name="Dialogue Manager" type="CanvasLayer" parent="."]
-process_mode = 3
-script = ExtResource("9_5fr2l")
-
-[node name="DialogueBox" type="Control" parent="Dialogue Manager"]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 3
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="DialogueText" type="RichTextLabel" parent="Dialogue Manager/DialogueBox"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 110.0
-offset_top = 45.0
-offset_right = 110.0
-offset_bottom = 45.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/default_color = Color(0, 0.07391659, 0.48251325, 1)
-theme_override_fonts/normal_font = ExtResource("10_2sb77")
-bbcode_enabled = true
-text = "This is a Dialogue Box test"
-
-[node name="Dialoguebox Sprite" type="Panel" parent="Dialogue Manager/DialogueBox"]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 23.0
-offset_top = -3.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_2sb77")
-
-[node name="laser" parent="." instance=ExtResource("12_gr2jy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9550321, 0, -10.8542795)
-
-[connection signal="timeout" from="PlayerCamera/Control/Hack1/Passcode/Timer" to="PlayerCamera/Control/Hack1/Passcode" method="_on_timer_timeout"]
-[connection signal="timeout" from="PlayerCamera/Control/Kill1/DeletableText/Timer" to="PlayerCamera/Control/Kill1/DeletableText" method="_on_timer_timeout"]
-[connection signal="timeout" from="PlayerCamera/Control/Phone1/Progress/Timer" to="PlayerCamera/Control/Phone1/Progress" method="_on_timer_timeout"]
-[connection signal="area_entered" from="PlayerCamera/PlayerArea" to="PlayerCamera" method="_on_player_area_area_entered"]
-[connection signal="area_exited" from="PlayerCamera/PlayerArea" to="PlayerCamera" method="_on_player_area_area_exited"]
+[connection signal="timeout" from="ScreenView/Hack1/Passcode/Timer" to="ScreenView/Hack1/Passcode" method="_on_timer_timeout"]
+[connection signal="pressed" from="ScreenView/Control/Button" to="ScreenView/Control/Button" method="_on_pressed"]
