@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bna85wnfgi7mj"]
+[gd_scene load_steps=10 format=3 uid="uid://bna85wnfgi7mj"]
 
 [ext_resource type="PackedScene" uid="uid://dlqcbxd4x8it4" path="res://models/WholeBlueTile.gltf" id="1_cjn25"]
 [ext_resource type="PackedScene" uid="uid://drpl35bsuvsrx" path="res://models/WholeEmptyTile.gltf" id="2_e6m40"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://20ki6uucfjvm" path="res://models/WholeRedTile.gltf" id="6_pa00x"]
 [ext_resource type="PackedScene" uid="uid://b1kwyl2t4uab6" path="res://models/GenericServerDoor.gltf" id="7_old6g"]
 [ext_resource type="PackedScene" uid="uid://l05wt5ghay52" path="res://models/WholeYellowTile.gltf" id="7_pggvk"]
+[ext_resource type="PackedScene" uid="uid://b10tssqggmobo" path="res://models/FullWallTile.gltf" id="9_e6m40"]
 
 [node name="Library" type="Node3D"]
 
@@ -34,3 +35,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -1)
 
 [node name="blockbench_export8" parent="." instance=ExtResource("7_old6g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -1)
+
+[node name="blockbench_export9" parent="." instance=ExtResource("9_e6m40")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -1)

@@ -11,7 +11,10 @@ config_version=5
 [application]
 
 config/name="Movie-Game-Jam"
+ HEAD
 run/main_scene="uid://dbvbkkh4ftdy4"
+
+ 6839ed4d4eb8c6406f6256c2b68d00131f581ed9
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -62,6 +65,5 @@ ui_down={
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
