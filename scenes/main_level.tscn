@@ -265,6 +265,143 @@ visible = false
 
 [node name="PlayerArea" type="Area3D" parent="PlayerCamera"]
 
+[node name="Facility_CC" type="GridMap" parent="."]
+mesh_library = ExtResource("9_iqu8w")
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65527, 65526, 1441800, 65526, 65526, 1441800, 65525, 65526, 1441800, 65524, 65526, 1441800, 65524, 65525, 1441800, 65525, 65525, 1441800, 65526, 65525, 1441800, 65527, 65525, 1441800, 65527, 65524, 1441800, 65526, 65524, 1441800, 65525, 65524, 1441800, 65524, 65524, 1441800, 65523, 65526, 1441800, 65523, 65525, 1441800, 65523, 65524, 1441800, 65523, 65523, 1441800, 65524, 65523, 1441800, 65525, 65523, 1441800, 65526, 65523, 1441800, 65527, 65523, 1441800, 65525, 65527, 1441800, 65525, 65528, 1441800, 65525, 65529, 1441800, 65525, 65530, 1441800, 65527, 65531, 1441800, 65525, 65534, 1441800, 65525, 65535, 1441800, 65526, 65531, 8, 65525, 65531, 8, 65524, 65531, 8, 65525, 65532, 8, 65525, 65533, 8, 65524, 65535, 1441804, 65526, 65535, 12, 65526, 65534, 1048588, 65524, 65534, 655372, 65525, 1, 655368, 65524, 1, 655368, 65526, 1, 655368, 65527, 1, 655368, 65524, 2, 655368, 65524, 3, 655368, 65525, 3, 655368, 65525, 4, 655368, 65526, 4, 655368, 65525, 2, 655368, 65526, 3, 655368, 65526, 2, 655368, 65527, 2, 655368, 65527, 3, 655368, 65527, 4, 655368, 65524, 4, 655368, 65522, 3, 655368, 65524, 5, 655368, 65524, 6, 655368, 65524, 7, 655368, 65525, 7, 655368, 65526, 7, 655368, 65526, 6, 655368, 65525, 6, 655368, 65525, 5, 655368, 65526, 5, 655368, 65527, 5, 655368, 65529, 4, 1048584, 65530, 4, 1048584, 65530, 3, 1048584, 65529, 2, 1048584, 65526, 9, 1048584, 65525, 9, 1048584, 65526, 11, 1048584, 65525, 11, 1048584, 65526, 13, 1048584, 65525, 13, 1048584, 65527, 14, 1048584, 65527, 15, 1048584, 65527, 16, 1048584, 65527, 17, 1048584, 65527, 18, 1048584, 65524, 18, 1048584, 65524, 17, 1048584, 65524, 16, 1048584, 65524, 15, 1048584, 65524, 14, 1048584, 65525, 14, 1048584, 65526, 14, 1048584, 65526, 15, 1048584, 65525, 15, 1048584, 65525, 16, 1048584, 65526, 16, 1048584, 65526, 17, 1048584, 65525, 17, 1048584, 65525, 18, 1048584, 65526, 18, 1048584, 65520, 3, 8, 65519, 3, 8, 65518, 3, 8, 65517, 3, 8, 65516, 3, 8, 65516, 2, 8, 65516, 1, 8, 65517, 1, 8, 65517, 2, 8, 65518, 2, 8, 65518, 1, 8, 65519, 1, 8, 65519, 2, 8, 65520, 2, 8, 65520, 1, 8, 65521, 2, 8, 65521, 1, 1048588, 65526, 19, 1048584, 65525, 19, 1048584, 65527, 13, 1048588, 65524, 13, 655372, 65524, 12, 1441804, 65524, 11, 655372, 65527, 12, 12, 65527, 11, 1048588, 65522, 16, 655368, 65522, 15, 655368, 65521, 16, 655368, 65521, 15, 655368, 65520, 16, 655368, 65520, 15, 655368, 65519, 16, 655368, 65519, 15, 655368, 65520, 14, 655368, 65519, 14, 655368, 65520, 13, 655368, 65519, 13, 655368, 65520, 17, 655368, 65520, 18, 655368, 65519, 18, 655368, 65519, 17, 655368, 65518, 18, 655368, 65518, 17, 655368, 65518, 14, 655368, 65518, 13, 655368, 65517, 14, 655368, 65517, 13, 655368, 65517, 18, 655368, 65517, 17, 655368, 65516, 18, 655368, 65516, 16, 1048584, 65516, 15, 1048584, 65515, 15, 1048584, 65515, 16, 1048584, 65514, 17, 1048584, 65514, 16, 1048584, 65514, 15, 1048584, 65514, 14, 1048584, 65513, 14, 1048584, 65512, 14, 1048584, 65511, 14, 1048584, 65509, 14, 1048584, 65509, 15, 1048584, 65509, 16, 1048584, 65509, 17, 1048584, 65511, 17, 1048584, 65512, 17, 1048584, 65513, 17, 1048584, 65513, 16, 1048584, 65512, 16, 1048584, 65511, 16, 1048584, 65510, 16, 1048584, 65510, 15, 1048584, 65511, 15, 1048584, 65512, 15, 1048584, 65513, 15, 1048584, 65516, 19, 1048584, 65516, 20, 1048584, 65517, 19, 1048584, 65518, 19, 1048584, 65515, 20, 1048584, 65514, 20, 1048584, 65514, 21, 1048584, 65514, 22, 1048584, 65514, 23, 1048584, 65514, 24, 1048584, 65513, 23, 1048584, 65512, 23, 1048584, 65509, 23, 1048584, 65508, 23, 1048584, 65507, 23, 1048584, 65507, 22, 1048584, 65508, 22, 1048584, 65506, 23, 1048584, 65506, 24, 1048584, 65505, 24, 1048584, 65504, 24, 1048584, 65504, 22, 1048584, 65504, 21, 1048584, 65505, 20, 1048584, 65503, 20, 1048584, 65502, 20, 1048584, 65502, 19, 1048584, 65503, 19, 1048584, 65503, 18, 1048584, 65502, 18, 1048584, 65504, 17, 1048584, 65504, 16, 1048584, 65504, 15, 1048584, 65500, 15, 1048584, 65500, 16, 1048584, 65500, 17, 1048584, 65501, 16, 1048584, 65501, 17, 1048584, 65502, 17, 1048584, 65503, 17, 1048584, 65503, 16, 1048584, 65503, 15, 1048584, 65502, 15, 1048584, 65502, 16, 1048584, 65499, 16, 1048584, 65498, 16, 1048584, 65497, 18, 1048584, 65497, 17, 1048584, 65497, 16, 1048584, 65496, 16, 1048584, 65496, 17, 1048584, 65496, 18, 1048584, 65495, 18, 1048584, 65495, 17, 1048584, 65495, 16, 1048584, 65501, 13, 1048584, 65501, 12, 1048584, 65500, 12, 1048584, 65499, 12, 1048584, 65499, 11, 1048584, 65500, 11, 1048584, 65501, 11, 1048584, 65501, 10, 1048584, 65501, 9, 1048584, 65500, 9, 1048584, 65499, 9, 1048584, 65499, 10, 1048584, 65500, 10, 1048584, 65502, 10, 1048584, 65503, 10, 1048584, 65504, 9, 1048584, 65503, 9, 1048584, 65502, 9, 1048584, 65504, 11, 1048584, 65504, 12, 1048584, 65505, 12, 1048584, 65506, 12, 1048584, 65507, 12, 1048584, 65507, 13, 1048584, 65507, 14, 1048584, 65508, 12, 1048584, 65509, 12, 1048584, 65510, 12, 1048584, 65507, 15, 1048584, 65507, 16, 1048584, 65507, 17, 1048584, 65507, 18, 1048584, 65507, 19, 1048584, 65508, 19, 1048584, 65509, 19, 1048584, 65510, 19, 1048584, 65510, 14, 1048584, 65510, 17, 1048584, 65501, 15, 1048584, 65515, 22, 1048588, 65515, 24, 12, 65513, 24, 1441804, 65513, 22, 655372, 65512, 24, 12, 65511, 24, 1441804, 65511, 22, 655372, 65512, 22, 1048588, 65511, 23, 1048584, 65515, 23, 1048584, 65529, 14, 1048584, 65529, 13, 1048584, 65530, 13, 1048584, 65531, 12, 1048584, 65532, 12, 1048584, 65532, 11, 1048584, 65531, 11, 1048584, 65532, 13, 1048584, 65534, 13, 1048584, 65534, 14, 1048584, 65535, 14, 1048584, 65535, 13, 1048584, 65535, 12, 1048584, 65535, 11, 1048584, 65534, 11, 1048584, 65534, 12, 1048584, 0, 13, 1048584, 0, 12, 1048584, 1, 14, 1048584, 1, 13, 1048584, 1, 12, 1048584, 1, 11, 1048584, 2, 13, 1048584, 3, 12, 1048584, 4, 12, 1048584, 4, 13, 1048584, 4, 14, 1048584, 4, 15, 1048584, 5, 15, 1048584, 6, 15, 1048584, 7, 15, 1048584, 8, 15, 1048584, 9, 15, 1048584, 9, 14, 1048584, 9, 13, 1048584, 8, 12, 1048584, 7, 12, 1048584, 6, 12, 1048584, 5, 12, 1048584, 10, 12, 1048584, 4, 16, 1048584, 4, 18, 1048584, 3, 18, 1048584, 1, 18, 1048584, 1, 19, 1048584, 2, 19, 1048584, 3, 19, 1048584, 4, 19, 1048584, 2, 17, 1048584, 2, 16, 1048584, 1, 16, 1048584, 0, 16, 1048584, 65535, 16, 1048584, 65535, 17, 1048584, 65535, 18, 1048584, 65535, 19, 1048584, 2, 20, 1048584, 2, 21, 1048584, 1, 21, 1048584, 3, 21, 1048584, 3, 20, 1048584, 4, 20, 1048584, 4, 21, 1048584, 0, 20, 1048584, 65535, 21, 1048584, 65535, 22, 1048584, 65534, 22, 1048584, 65533, 22, 1048584, 65533, 21, 1048584, 65533, 20, 1048584, 65528, 15, 1048584, 65528, 16, 1048584, 65532, 19, 1048584, 65532, 18, 1048584, 65531, 18, 1048584, 65531, 17, 1048584, 65532, 17, 1048584, 65532, 16, 1048584, 65531, 16, 1048584, 65530, 16, 1048584, 65530, 18, 1048584, 65529, 18, 1048584, 65529, 17, 1048584, 65529, 16, 1048584, 65529, 15, 1048584, 65530, 5, 8, 65529, 5, 8)
+}
+
+[node name="Door Folder" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 25)
+
+[node name="blockbench_export" parent="Door Folder" instance=ExtResource("9_uk2yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
+
+[node name="blockbench_export2" parent="Door Folder" instance=ExtResource("9_uk2yf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
+
+[node name="blockbench_export3" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, -20)
+
+[node name="blockbench_export4" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -20)
+
+[node name="blockbench_export5" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -18)
+
+[node name="blockbench_export6" parent="Door Folder" instance=ExtResource("11_0e4v7")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8, 0, -18)
+
+[node name="blockbench_export7" parent="Door Folder" instance=ExtResource("12_6nivd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.423832, 0, -11.447984)
+
+[node name="blockbench_export8" parent="Door Folder" instance=ExtResource("13_al56o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+
+[node name="blockbench_export9" parent="Door Folder" instance=ExtResource("13_al56o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="blockbench_export12" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="blockbench_export13" parent="Door Folder" instance=ExtResource("10_ondrs")]
+
+[node name="blockbench_export14" parent="Door Folder" instance=ExtResource("14_1bmon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 16)
+
+[node name="blockbench_export15" parent="Door Folder" instance=ExtResource("14_1bmon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="blockbench_export16" parent="Door Folder" instance=ExtResource("13_al56o")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6, 0, 4)
+
+[node name="blockbench_export17" parent="Door Folder" instance=ExtResource("13_al56o")]
+transform = Transform3D(0, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 0, 6, 0, 10)
+
+[node name="blockbench_export18" parent="Door Folder" instance=ExtResource("15_siio1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 8)
+
+[node name="blockbench_export19" parent="Door Folder" instance=ExtResource("15_siio1")]
+transform = Transform3D(-1, 0, 1.1920929e-07, 0, 1, 0, -1.1920929e-07, 0, -1, -16, 0, 6)
+
+[node name="blockbench_export22" parent="Door Folder" instance=ExtResource("15_siio1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 2)
+
+[node name="blockbench_export23" parent="Door Folder" instance=ExtResource("15_siio1")]
+transform = Transform3D(-1, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, -1, -30, 0, 12)
+
+[node name="blockbench_export24" parent="Door Folder" instance=ExtResource("16_ndwfr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.318256, -0.91877365, 15.900387)
+
+[node name="blockbench_export25" parent="Door Folder" instance=ExtResource("17_ondrs")]
+transform = Transform3D(-0.99999994, 0, 0, 0, 1, 0, 0, 0, -0.99999994, -48, 0, 4)
+
+[node name="blockbench_export26" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -42, 0, 16)
+
+[node name="blockbench_export27" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 22)
+
+[node name="blockbench_export28" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18, 0, 22)
+
+[node name="blockbench_export29" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -30, 0, 22)
+
+[node name="blockbench_export30" parent="Door Folder" instance=ExtResource("15_siio1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, -4)
+
+[node name="blockbench_export10" parent="Door Folder" instance=ExtResource("18_al56o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8)
+
+[node name="blockbench_export11" parent="Door Folder" instance=ExtResource("18_al56o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="blockbench_export20" parent="Door Folder" instance=ExtResource("13_al56o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
+
+[node name="blockbench_export21" parent="Door Folder" instance=ExtResource("13_al56o")]
+transform = Transform3D(-0.99999994, 0, 0, 0, 1, 0, 0, 0, -0.99999994, 12, 0, 2)
+
+[node name="blockbench_export31" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16, 0, 2)
+
+[node name="blockbench_export32" parent="Door Folder" instance=ExtResource("19_1bmon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.905588, 0, -4.840214)
+
+[node name="blockbench_export33" parent="Door Folder" instance=ExtResource("20_siio1")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 26, 0, 0)
+
+[node name="blockbench_export34" parent="Door Folder" instance=ExtResource("20_siio1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, 6)
+
+[node name="blockbench_export35" parent="Door Folder" instance=ExtResource("20_siio1")]
+transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, -4, 0, 8)
+
+[node name="blockbench_export36" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 40, 0, 0)
+
+[node name="blockbench_export37" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 10)
+
+[node name="blockbench_export38" parent="Door Folder" instance=ExtResource("20_siio1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 16)
+
+[node name="blockbench_export39" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24, 0, 16)
+
+[node name="blockbench_export40" parent="Door Folder" instance=ExtResource("10_ondrs")]
+transform = Transform3D(-0.99999994, 0, 0, 0, 1, 0, 0, 0, -0.99999994, 26, 0, 12)
+
+[node name="blockbench_export41" parent="Door Folder" instance=ExtResource("20_siio1")]
+transform = Transform3D(-1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, -1.0000001, 14, 0, 16)
+
+[node name="blockbench_export" parent="." instance=ExtResource("21_1bmon")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -20.958097, 0.8277305, -5.796525)
+
+[node name="blockbench_export2" parent="." instance=ExtResource("21_1bmon")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -19.97, 0.6986592, 38.964344)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerCamera/PlayerArea"]
 shape = SubResource("BoxShape3D_8ra5a")
 
